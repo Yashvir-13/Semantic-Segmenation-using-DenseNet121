@@ -133,17 +133,24 @@ To train the model, we used:
 ### Training Command
 
 ```python
-unet_model.compile(
-    optimizer='adam',
-    loss=tf.keras.losses.CategoricalCrossentropy(),
-    metrics=[tf.keras.metrics.MeanIoU(num_classes=21)]
+EarlyStop = tf.keras.callbacks.EarlyStopping(patience=10, restore_best_weights=True, monitor='val_loss')
+checkpoint_path = os.path.join(os.curdir,"checkpoint.keras")
+Checkpoint = tf.keras.callbacks.ModelCheckpoint(checkpoint_path, save_best_only=True, monitor='val_loss')
+
+Tensorboard = tf.keras.callbacks.TensorBoard(board_log_path)
+rl = tf.keras.callbacks.ReduceLROnPlateau(monitor='val_mean_io_u', factor=0.1, patience=5, verbose=1, mode="max", min_lr=0.0001)
+
+MeanIou = tf.keras.metrics.MeanIoU(num_classes=21)
+
+model.compile(optimizer='Adam'
+                   ,loss='categorical_crossentropy'
+                   ,metrics=[MeanIou])
+history = model.fit(train_generator
+                    ,validation_data=val_generator
+                    ,epochs=5
+                    ,callbacks=[EarlyStop,Checkpoint,Tensorboard,rl]
 )
-history = unet_model.fit(
-    train_generator,
-    validation_data=val_generator,
-    epochs=5,
-    callbacks=[tf.keras.callbacks.EarlyStopping(patience=10, restore_best_weights=True, monitor='val_loss')]
-)
+
 ```
 
 ### Saving the Model
@@ -151,7 +158,7 @@ history = unet_model.fit(
 After training, the model can be saved as follows:
 
 ```python
-unet_model.save('densenet121_segmentation_model.h5')
+model.save('model_trained.keras')
 ```
 
 ---
