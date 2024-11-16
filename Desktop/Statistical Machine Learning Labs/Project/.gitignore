@@ -17,6 +17,24 @@ Pictures/
 Videos/
 ntuser*
 *.lnk
+# System Files
+.cache/
+.conda/
+.config/
+.ipynb_checkpoints/
+.ipython/
+.jupyter/
+.kaggle/
+.keras/
+.matplotlib/
+.vscode/
+AppData/
+ntuser.*
+
+# Specific Directories or Files
+**/VOCtrainval_11-May-2012/
+*.tar
+*.log
 
 # Ignore temporary or log files
 *.log
