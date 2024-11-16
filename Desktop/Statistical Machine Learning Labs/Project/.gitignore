@@ -1,1 +1,25 @@
-".cache/" 
+
+# Ignore system directories and files
+.cache/
+.conda/
+.config/
+.ipynb_checkpoints/
+.ipython/
+.jupyter/
+.kaggle/
+.keras/
+.matplotlib/
+AppData/
+Documents/
+Downloads/
+OneDrive/
+Pictures/
+Videos/
+ntuser*
+*.lnk
+
+# Ignore temporary or log files
+*.log
+*.tmp
+*.DS_Store
+
