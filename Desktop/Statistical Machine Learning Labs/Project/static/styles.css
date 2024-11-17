@@ -1,0 +1,329 @@
+/* General Styling */
+body {
+    margin: 0 center;
+    font-family: 'Orbitron', sans-serif;
+    color: #fff;
+    background-color: #121212;
+    overflow: hidden;
+}
+.go-back-btn {
+    position: absolute;
+    top: 20px;  /* Adjust the top position if needed */
+    left: 20px; /* Adjust the left position if needed */
+    background: #444;  /* Optional styling */
+    color: white;
+    padding: 12px 25px;
+    font-size: 1.3em;
+    border: 2px solid #ff00ff;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.go-back-btn:hover {
+    box-shadow: 0px 0px 25px #ff00ff;
+    transform: scale(1.1);
+}
+
+/* Main Container */
+.main-container {
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    max-width: 80%;
+    box-sizing: content-box;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Ensure the page covers full height */
+    overflow-x: auto; /* Prevent horizontal scroll */
+}
+.upload-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 50px;
+
+}
+.btn {
+    background: #555;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px #333;
+}
+
+.btn:hover {
+    box-shadow: 0px 0px 20px #fff;
+}
+.file-input-label {
+    cursor: pointer;
+    background: #333;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px #444;
+    margin-bottom: 20px;
+}
+
+.file-input-label:hover {
+    box-shadow: 0px 0px 15px #fff;
+}
+
+/* Title Hover Effect */
+.title {
+    font-size: 2.5em; /* Reduced font size */
+    text-shadow: 0px 0px 10px #aaa;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.title:hover {
+    color: #ff00ff;
+    text-shadow: 0px 0px 15px #ff00ff;
+}
+
+/* Description */
+.description {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 700px; /* Reduced width */
+    line-height: 1.4;
+    margin-top: 30px;
+    font-size: 1em; /* Reduced font size */
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    box-shadow: 0 0 10px #444;
+}
+
+.description h2 {
+    color: #ff00ff;
+    font-size: 1.4em; /* Adjusted font size */
+}
+
+.description p {
+    margin-bottom: 10px; /* Reduced space between paragraphs */
+}
+
+/* Upload Area */
+.upload-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px; /* Reduced margin */
+    gap: 10px; /* Reduced gap */
+    flex-wrap: wrap; /* Ensure the buttons stack in smaller screens */
+}
+
+/* Drag & Drop Box */
+.drag-drop-box {
+    background: #333;
+    padding: 20px; /* Reduced padding */
+    width: 250px; /* Adjusted width */
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px #444;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+}
+
+.drag-drop-box span {
+    display: block;
+    font-size: 1.1em; /* Reduced font size */
+    margin-bottom: 15px; /* Reduced space */
+}
+
+.file-input {
+    display: none;
+}
+
+.btn {
+    background: #555;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px #333;
+}
+
+.btn:hover {
+    box-shadow: 0px 0px 20px #fff;
+}
+
+/* Upload Button */
+
+
+
+
+/* Process Button */
+
+
+/* General Button Styling */
+.btn {
+    background: #444; /* Darker background for contrast */
+    color: white;
+    padding: 12px 25px; /* Slightly larger padding */
+    font-size: 1.3em; /* Increased font size for better readability */
+    border: 2px solid #ff00ff; /* Add border with the theme color */
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5); /* Softer shadow */
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Add smooth transition for hover effects */
+}
+
+.btn:hover {
+    box-shadow: 0px 0px 25px #ff00ff; /* Increase shadow on hover */
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+/* Specific Button Adjustments for Upload Button */
+#upload-btn {
+    background: #444;
+    color: white;
+    padding: 12px 25px;
+    font-size: 1.3em;
+    border: 2px solid #ff00ff; 
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5); /* Softer shadow */
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+#upload-btn:hover {
+    box-shadow: 0px 0px 25px #ff00ff;
+    transform: scale(1.1);
+}
+/* Hide the default file input text */
+.upload-form input[type="file"] {
+    display: none; /* Hides the default file input */
+}
+
+/* Ensure the label spans display the custom "Upload Images" text */
+.upload-form .btn {
+    position: relative;
+}
+
+.upload-form .btn span {
+    display: block; /* Ensures the text "Upload Images" is visible */
+}
+
+
+/* Specific Button Adjustments for Process Button */
+#process-btn {
+    background: #ff00ff;
+    color: white;
+    padding: 12px 25px;
+    font-size: 1.3em;
+    border: 2px solid #ff00ff; 
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    margin-top: 25px; /* Adjusted margin for spacing */
+}
+
+#process-btn:hover {
+    box-shadow: 0px 0px 25px #ff00ff;
+    transform: scale(1.1);
+}
+
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 600px) {
+    .upload-area {
+        flex-direction: column;
+        gap: 10px;
+        align-items: stretch; /* Ensure buttons stretch to the full width */
+    }
+
+    .description {
+        font-size: 0.9em; /* Further reduced font size */
+        padding: 12px;
+    }
+
+    .drag-drop-box {
+        width: 100%;
+    }
+
+    #upload-btn,
+    #process-btn {
+        width: 100%; /* Make buttons stretch across the screen */
+    }
+}
+
+/* Background Video */
+#background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Image Gallery */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+    margin-top: 30px;
+    max-height: 80vh;
+    overflow-y: scroll;
+    padding-right: 75px;
+    margin-left: auto;
+    margin-right: 0;
+
+}
+* {
+    box-sizing: border-box; /* Apply border-box sizing to all elements */
+}
+.image-card {
+    position: relative;
+    width: fit-content;
+    height: 300px;
+    overflow: hidden;
+    margin-right: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #333;
+}
+
+.image-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.image-card:hover img {
+    transform: scale(1.1);
+}
+
+.image-text {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 5px 10px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.image-card:hover .image-text {
+    opacity: 1;
+}
