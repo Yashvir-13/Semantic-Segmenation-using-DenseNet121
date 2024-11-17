@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Segmentation Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <a href="/" class="btn">Go Back</a>
+    <div class="main-container">
+        <h1 class="title">Segmentation Results</h1>
+        <div class="gallery">
+            {% for result in results %}
+            <div class="image-card">
+                <img src="{{ url_for('result_file', filename=result.original) }}" alt="Original" class="image">
+                <span class="image-text">Original</span>
+            </div>
+            <div class="image-card">
+                <img src="{{ url_for('result_file', filename=result.mask) }}" alt="Predicted Mask" class="image">
+                <span class="image-text">Predicted Mask</span>
+            </div>
+            <div class="image-card">
+                <img src="{{ url_for('result_file', filename=result.overlay) }}" alt="Overlay" class="image">
+                <span class="image-text">Overlay</span>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div id="background-animation">
+        <video autoplay loop muted id="background-video"> 
+            <source src="static/3163534-uhd_3840_2160_30fps.mp4" type="video/mp4"> Your browser does not support the video tag. 
+        </video>
+    </div>
+</body>
+</html>

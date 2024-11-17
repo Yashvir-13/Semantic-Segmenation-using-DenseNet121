@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Semantic Segmentation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+     <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main-container">
+        <h1 class="title">Semantic Segmentation</h1>
+        <div class="description">
+            <h2>About the Model</h2>
+            <p>This web application leverages a deep learning model for semantic segmentation, allowing the automatic classification and segmentation of objects in images. The model is built using a combination of Convolutional Neural Networks (CNNs) and advanced segmentation techniques, which have been fine-tuned on a diverse dataset to ensure high accuracy.</p>
+            <p>Our model uses a pre-trained backbone architecture (such as DeepLabV3, or custom CNN) to efficiently identify and segment different objects in the input images. The segmentation maps are then processed to create a clear separation between the objects and their background.</p>
+            <p>The model is designed to handle complex scenes with multiple objects, and can be applied in fields like autonomous driving, medical imaging, and urban planning, among others.</p>
+        </div>
+    
+        <form action="/" method="POST" enctype="multipart/form-data" class="upload-form">
+            <label class="btn">
+                <input type="file" name="files" multiple>
+                <span>Upload Images</span>
+            </label>
+            <button type="submit" class="btn">Process Images</button>
+        </form>
+    </div>
+    <div id="background-animation">
+        <video autoplay loop muted id="background-video"> 
+            <source src="static/3163534-uhd_3840_2160_30fps.mp4" type="video/mp4"> Your browser does not support the video tag. </video>
+    </div>
+
+    
+</body>
+</html>
