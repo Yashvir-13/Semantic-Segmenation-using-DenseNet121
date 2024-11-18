@@ -6,10 +6,14 @@ from tensorflow.keras.preprocessing import image
 from PIL import Image
 import cv2
 import time
+import tensorflow as tf
 
 # Initialize Flask app
 app = Flask(__name__)
-
+gpus = tf.config.list_physical_devices('GPU')
+if gpus:
+    # Hide all GPUs
+    tf.config.set_visible_devices([], 'GPU')
 # Define upload and result folders, and allowed extensions
 app.config['UPLOAD_FOLDER'] = 'uploads'
 app.config['RESULT_FOLDER'] = 'results'
@@ -103,5 +107,5 @@ def result_file(filename):
     return send_from_directory(app.config['RESULT_FOLDER'], filename)
 
 if __name__ == '__main__':
-    app.run(debug=False)
+    app.run(host='0.0.0.0', port=int(os.environ.get("PORT", 5000)))
 
